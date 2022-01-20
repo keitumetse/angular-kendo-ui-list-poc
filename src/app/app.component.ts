@@ -1,4 +1,5 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
+import { watchListItems } from './watchlist';
 
 @Component({
   selector: 'my-app',
@@ -6,5 +7,5 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name = 'Angular ' + VERSION.major;
+  public watchListItems: any[] = watchListItems;
 }

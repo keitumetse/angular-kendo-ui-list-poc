@@ -1,3 +1,18 @@
-p {
-  font-family: Lato;
+.k-listview {
+  font-family: sans-serif;
+  height: 340px;
+}
+.product {
+  padding: 8px;
+  width: 100%;
+}
+.product-name {
+  margin: 0 4px;
+}
+.item-position {
+  font-style: italic;
+}
+.product.border-bottom {
+  border-bottom-width: 1px;
+  border-bottom-color: lightgrey;
 }

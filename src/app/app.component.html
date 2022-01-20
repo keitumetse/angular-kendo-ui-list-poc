@@ -1,4 +1,30 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<kendo-listview
+            [data]="watchListItems"
+            containerClass="k-d-flex k-flex-col k-flex-nowrap"
+        >
+        <ng-template kendoListViewHeaderTemplate>
+        <div class="header">
+          <strong><div class="title">Watchlist Panel</div></strong>
+        </div>
+      </ng-template>
+            <ng-template
+                kendoListViewItemTemplate
+                let-dataItem="dataItem"
+                let-index="index"
+                let-isFirst="isFirst"
+                let-isLast="isLast"
+            >
+                <div
+                    class="product"
+                    [class.border-bottom]="!isLast"
+                >
+                    <div kendoTooltip filter="span" id="agglomerations">
+                        <input type="checkbox" checked kendoCheckBox/>
+                        <span title="
+                        Name: {{dataItem.name}}&#013;Market: {{dataItem.market}}&#013;Company: {{dataItem.company}}&#013;Role: {{dataItem.role}}&#013;Event Type: {{dataItem.eventType}}&#013;
+                        " 
+                        class="product-name">{{ dataItem.name }}</span>
+                    </div>
+                </div>
+            </ng-template>
+</kendo-listview>
